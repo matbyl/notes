@@ -28,3 +28,5 @@ Using the function we could redefine sequence in the following way:
     sequence [] = return []
     return [c:cs] = return (:) `ap` c `ap` sequence cs
 ```
+
+As you may notice this is expressed in a way that abstracts away most of the effectful stuff and better explains what should be done and not how, i.e. more declaritive less imperative.
